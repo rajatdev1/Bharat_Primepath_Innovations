@@ -1,0 +1,66 @@
+.services-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+/* Grid Item fix for equal width */
+.service-grid-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Service Card */
+.service-card {
+  width: 100%;
+  max-width: 320px;   /* Fix width (na bahut bada, na chhota) */
+  min-height: 250px;  /* Thoda height fix */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Text Wrap fix */
+.service-description {
+  line-height: 1.6;
+  color: #555;
+  transition: color 0.3s;
+  white-space: normal;     /* force wrap */
+  word-break: break-word;  /* long words break ho jaye */
+}
+
+/* Hover Effect */
+.service-card:hover {
+  background: #1976d2;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover .service-title,
+.service-card:hover .service-description {
+  color: #fff !important;
+}
+
+/* Icon */
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(20deg);
+}
