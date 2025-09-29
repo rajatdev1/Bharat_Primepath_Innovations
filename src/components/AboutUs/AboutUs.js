@@ -1,14 +1,25 @@
 import React from "react";
 import { Container, Typography, Grid, Card, CardContent, Avatar,Box } from "@mui/material";
 import "./AboutUs.css";
+import rajatImg from "../../assets/images/rajat.png";
+import anandImg from "../../assets/images/anand.png";
+import kalashImg from "../../assets/images/kalash.jpeg";
+import ramImg from "../../assets/images/ram.jpeg";
+import ajayImg from "../../assets/images/ajay.jpeg";
+import utImg from "../../assets/images/utsav.jpeg";
+import kanikaImg from "../../assets/images/kanika.jpeg";
+
 
 const teamMembers = [
-  { name: "Rahul Sharma", role: "Founder & MD", img: "https://via.placeholder.com/150" },
-  { name: "Priya Singh", role: "CEO", img: "https://via.placeholder.com/150" },
-  { name: "Amit Verma", role: "Director", img: "https://via.placeholder.com/150" },
-  { name: "Neha Gupta", role: "Sr.Manager", img: "https://via.placeholder.com/150" },
-  { name: "veena Pawar", role: "Manager", img: "https://via.placeholder.com/150" },
-  { name: "Development Team", role: "Frontend & Backend Developers", img: "https://via.placeholder.com/150" },
+  { name: "Rajat Jha", role: "Founder & MD", img: rajatImg },
+  { name: "Anand Mishra", role: "CEO", img: anandImg },
+  { name: "Ajay Kr Jha", role: "Director", img: ajayImg },
+  { name: "Kalash Tyagi", role: "FullStack Developer(Lead)", img: kalashImg },
+  { name: "Ram Tiwari", role: "Sr Backend Developer", img: ramImg },
+  { name: "Isshu Singh", role: "FullStack Developer", img: "https://via.placeholder.com/150" },
+  { name: "Utsav Tiwari", role: "Sr Backend Developer", img: utImg },
+  { name: "Kanika Tyagi", role: "Business Development", img: kanikaImg },
+  
 ];
 
 const AboutUs = () => {
@@ -43,23 +54,25 @@ const AboutUs = () => {
           Meet Our Team
         </Typography>
 
-        <Grid container spacing={4} justifyContent="center">
-          {teamMembers.map((member, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index} className="about-grid-item">
-              <Card className="about-card">
-                <Avatar src={member.img} alt={member.name} className="team-avatar" />
-                <CardContent className="card-text">
-                  <Typography variant="h6" className="team-name">
-                    {member.name}
-                  </Typography>
-                  <Typography variant="body2" className="team-role">
-                    {member.role}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+       <Grid container spacing={3} justifyContent="center">
+  {teamMembers.map((member, index) => (
+    <Grid item xs={12} sm={6} md={3} key={index} className="about-grid-item">
+      {/* 👆 yaha md={3} ka matlab hai 12/3 = 4 cards ek row me */}
+      <Card className="about-card">
+        <Avatar src={member.img} alt={member.name} className="team-avatar" />
+        <CardContent className="card-text">
+          <Typography variant="h6" className="team-name">
+            {member.name}
+          </Typography>
+          <Typography variant="body2" className="team-role">
+            {member.role}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Grid>
+  ))}
+</Grid>
+
       </Container>
     </div>
   );
