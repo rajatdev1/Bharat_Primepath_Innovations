@@ -57,32 +57,42 @@ const Header = () => {
   return (
     <AppBar position="sticky" className="app-bar" elevation={0}>
       <Toolbar className="toolbar">
-        <Typography 
-  variant="h6" 
-  component="div" 
+      <Typography
+  variant="h6"
+  component="div"
   className="logo"
-  sx={{ display: 'flex', alignItems: 'center', fontWeight: 'bold', color: '#1976d2' }}
+  sx={{
+    display: 'flex',
+    alignItems: 'center',
+    fontWeight: 'bold',
+    color: '#1976d2'
+  }}
 >
-  <img 
-  src={Logo} 
-  alt="Logo" 
-  style={{ 
-    height: "160px",     // header ke hisaab se perfect size
-    width: "auto",      // width proportionally adjust
-    marginRight: "-42px",
-    objectFit: "contain",
-    display: "block"
-  }} 
-/>
-  <span style={{ 
-    fontSize: '1.2rem', 
-    fontWeight: 600, 
-    letterSpacing: '1px', 
-    fontFamily: "'Poppins', sans-serif" 
-  }}>
-    Bharat <span style={{ color: '#0d47a1' }}>Primepath</span> Innovations
-  </span>
+  <img
+    src={Logo}
+    alt="Logo"
+    style={{
+      height: "160px", // header ke hisaab se perfect size
+      width: "auto",
+      marginRight: isMobile ? "0px" : "-42px", // mobile me margin adjust
+      objectFit: "contain",
+      display: "block"
+    }}
+  />
+  {!isMobile && ( // text sirf desktop/tablet me dikhe
+    <span
+      style={{
+        fontSize: '1.2rem',
+        fontWeight: 600,
+        letterSpacing: '1px',
+        fontFamily: "'Poppins', sans-serif"
+      }}
+    >
+      Bharat <span style={{ color: '#0d47a1' }}>Primepath</span> Innovations
+    </span>
+  )}
 </Typography>
+
 
         
         {isMobile ? (
