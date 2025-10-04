@@ -8,17 +8,21 @@ import ramImg from "../../assets/images/ram.jpeg";
 import ajayImg from "../../assets/images/ajay.jpeg";
 import utImg from "../../assets/images/utsav.jpeg";
 import kanikaImg from "../../assets/images/kanika.jpeg";
+import jkImg from "../../assets/images/jk.jpeg";
 
 
 const teamMembers = [
-  { name: "Rajat Jha", role: "Founder & MD", img: rajatImg },
-  { name: "Anand Mishra", role: "CEO", img: anandImg },
-  { name: "Ajay Kr Jha", role: "Director", img: ajayImg },
+  { name: "Rajat Jha",  role: (<>Founder & MD <br /> Full Stack Developer</>), img: rajatImg },
+  { name: "Anand Mishra",  role: (<>CEO <br /> Full Stack Developer</>), img: anandImg },
+  { name: "Ajay Kr Jha",  role: (<> Director <br /> Full Stack Developer</>), img: ajayImg },
+  { name: "Prashant Dubey", role: (<>Joint Director <br /> Full Stack Developer</>), img: jkImg },
+  
   { name: "Kalash Tyagi", role: "FullStack Developer(Lead)", img: kalashImg },
   { name: "Ram Tiwari", role: "Sr Backend Developer", img: ramImg },
   { name: "Isshu Singh", role: "FullStack Developer", img: "https://via.placeholder.com/150" },
   { name: "Utsav Tiwari", role: "Sr Backend Developer", img: utImg },
   { name: "Kanika Tyagi", role: "Business Development", img: kanikaImg },
+  
   
 ];
 
