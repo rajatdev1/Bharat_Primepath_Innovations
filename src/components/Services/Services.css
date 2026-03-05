@@ -1,66 +1,169 @@
 .services-section {
-  padding: 0px 0;
-  background: #f8f9fa;
+  padding: 100px 0;
+  background: #0F1424;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Grid Item fix for equal width */
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  color: white !important;
+  margin-bottom: 20px !important;
+}
+
+.section-title .highlight {
+  background: linear-gradient(135deg, #00E5FF, #AA00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 1.2rem !important;
+}
+
 .service-grid-item {
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Service Card */
 .service-card {
   width: 100%;
-  max-width: 320px;   /* Fix width (na bahut bada, na chhota) */
-  min-height: 250px;  /* Thoda height fix */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  background: white;
-  padding: 20px;
-  text-align: center;
+  max-width: 350px;
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 229, 255, 0.1) !important;
+  border-radius: 20px !important;
+  padding: 30px !important;
+  transition: all 0.4s ease !important;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-/* Text Wrap fix */
-.service-description {
-  line-height: 1.6;
-  color: #555;
-  transition: color 0.3s;
-  white-space: normal;     /* force wrap */
-  word-break: break-word;  /* long words break ho jaye */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.1), transparent);
+  transition: left 0.5s ease;
 }
 
-/* Hover Effect */
 .service-card:hover {
-  background: #1976d2;
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-15px) scale(1.02);
+  border-color: #00E5FF !important;
+  box-shadow: 0 20px 40px rgba(0, 229, 255, 0.2) !important;
 }
 
-.service-card:hover .service-title,
-.service-card:hover .service-description {
-  color: #fff !important;
+.service-card:hover::before {
+  left: 100%;
 }
 
-/* Icon */
 .service-icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #1976d2, #42a5f5);
-  color: white;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(170, 0, 255, 0.1));
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 0 auto 15px;
-  transition: transform 0.3s;
+  margin: 0 auto 25px;
+  border: 2px solid rgba(0, 229, 255, 0.3);
+  transition: all 0.4s ease;
 }
 
 .service-card:hover .service-icon {
-  transform: scale(1.1) rotate(20deg);
+  transform: rotate(360deg) scale(1.1);
+  border-color: #00E5FF;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+}
+
+.icon-emoji {
+  font-size: 2.5rem;
+}
+
+.service-title {
+  color: white !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  text-align: center;
+  font-size: 1.3rem !important;
+}
+
+.service-description {
+  color: rgba(255, 255, 255, 0.6) !important;
+  text-align: center;
+  line-height: 1.7 !important;
+}
+
+.card-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.service-card:hover .card-shine {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+  
+  .service-card {
+    max-width: 300px;
+  }
 }

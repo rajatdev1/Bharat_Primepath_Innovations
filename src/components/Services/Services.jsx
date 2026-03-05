@@ -47,7 +47,7 @@ return (
     <div id="services" className="services-section">
       <Container maxWidth="lg">
         <Typography variant="h3" align="center" gutterBottom className="section-title">
-          Our Services
+          Our  <span className="highlight">Services</span>
         </Typography>
         <Typography variant="h6" align="center" className="section-subtitle" gutterBottom>
           We offer comprehensive software solutions tailored to your business needs
