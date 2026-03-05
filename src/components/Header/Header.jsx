@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import BoltIcon from '@mui/icons-material/Bolt';
+
 import './Header.css';
 import Logo from "../../assets/images/logowhite.png";
 

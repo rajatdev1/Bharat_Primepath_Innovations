@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Container, Typography, Button, Box, Grid } from "@mui/material";
 import "./Hero.css";
-import heroBg from "../../assets/images/2.jpg";
+
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import CodeIcon from '@mui/icons-material/Code';
 import CloudIcon from '@mui/icons-material/Cloud';

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Container, Typography, Grid, Card, CardContent, Avatar, Box, Chip } from "@mui/material";
+import { Container, Typography, Grid, Card, Avatar, Box, Chip } from "@mui/material";
 import "./AboutUs.css";
 import rajatImg from "../../assets/images/rajat.png";
 import anandImg from "../../assets/images/anand.png";

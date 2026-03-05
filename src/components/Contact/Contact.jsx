@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Container,
   Typography,
-  Grid,
   Box,
   Dialog,
   DialogTitle,
@@ -29,8 +28,7 @@ import './Contact.css';
 const Contact = () => {
   const [emailDialogOpen, setEmailDialogOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const isTablet = useMediaQuery(theme.breakpoints.between('md', 'lg'));
+ 
   
   // Form state
   const [formData, setFormData] = useState({
