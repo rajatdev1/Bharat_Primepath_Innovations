@@ -12,7 +12,7 @@ import {
   Alert,
   CircularProgress,
   InputAdornment,
-  useMediaQuery,
+
   useTheme
 } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -27,9 +27,8 @@ import './Contact.css';
 
 const Contact = () => {
   const [emailDialogOpen, setEmailDialogOpen] = useState(false);
-  const theme = useTheme();
  
-  
+
   // Form state
   const [formData, setFormData] = useState({
     name: '',
